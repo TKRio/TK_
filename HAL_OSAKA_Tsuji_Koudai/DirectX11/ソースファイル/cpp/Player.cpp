@@ -114,7 +114,6 @@ void Player::InitMat() {
 }
 
 void Player::UpDate() {
-	
 	cameraData.axisZ3.x = cutterModelData.matrix._31;
 	cameraData.axisZ3.y = cutterModelData.matrix._32;
 	cameraData.axisZ3.z = cutterModelData.matrix._33;

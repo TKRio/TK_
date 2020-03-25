@@ -206,7 +206,6 @@ void MMDBreaker::PMDModel::UnInit() {
 }
 
 void MMDBreaker::PMDModel::Draw() {
-	//ここから先関数化できそう
 	devcontext->IASetInputLayout(vertexLayout);				// 頂点フォーマットをセット
 	devcontext->VSSetShader(vertexShader, nullptr, 0);		// 頂点シェーダーをセット
 	devcontext->PSSetShader(pixelShader, nullptr, 0);		// ピクセルシェーダーをセット

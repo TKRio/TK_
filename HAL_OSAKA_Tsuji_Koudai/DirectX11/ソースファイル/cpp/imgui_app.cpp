@@ -35,9 +35,12 @@ void ImGuiAppFunc::ParentWindow(Player *p) {
 	//プレイヤーの座標の表示
 	ImGui::Begin("debug window Player");
 	std::string str;
-	str = "Player Position\nX: " + std::to_string(p->GetMatrix()._41)
+	str = "Victim Position\nX: " + std::to_string(p->GetMatrix()._41)
 		+ "\nY: " + std::to_string(p->GetMatrix()._42)
 		+ "\nZ: " + std::to_string(p->GetMatrix()._43);
+	ImGui::Text(str.c_str());
+
+	str = "Victim Vertex\n" + std::to_string(p->GetVertexCount());
 	ImGui::Text(str.c_str());
 
 	static float trans[3] = { p->GetTrans().x,p->GetTrans().y,p->GetTrans().z };
@@ -56,7 +59,7 @@ void ImGuiAppFunc::ParentWindow(Player *p) {
 		ImGui::Spacing();
 	}
 
-	str = "Player Rotate\nX: " + std::to_string(p->GetAngle().x)
+	str = "Victim Rotate\nX: " + std::to_string(p->GetAngle().x)
 		+ "\nY: " + std::to_string(p->GetAngle().y)
 		+ "\nZ: " + std::to_string(p->GetAngle().z);
 	ImGui::Text(str.c_str());

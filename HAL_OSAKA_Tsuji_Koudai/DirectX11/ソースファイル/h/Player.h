@@ -93,14 +93,14 @@ public:
 	void UnInit();
 
 	//Getter
-	const DirectX::XMFLOAT4X4 GetMatrix() { return cutterModelData.matrix;}
-	const DirectX::XMFLOAT3 GetAngle() { return cutterModelData.angle;}
-	const DirectX::XMFLOAT3 GetTrans() { return cutterModelData.trans;}	
+	const DirectX::XMFLOAT4X4 GetMatrix() { return victimModelData[modelNumber].matrix;}
+	const unsigned int GetVertexCount() { return victim[modelNumber].GetVertexCount();}
+	const DirectX::XMFLOAT3 GetAngle() { return victimModelData[modelNumber].angle;}
+	const DirectX::XMFLOAT3 GetTrans() { return victimModelData[modelNumber].trans;}
 	const CAMERADATA GetCameraData() { return cameraData;}
-
 	//Setter
-	void SetAngle(DirectX::XMFLOAT3 setAngle) { cutterModelData.angle = setAngle; }
-	void SetTrans(DirectX::XMFLOAT3 setTrans) { cutterModelData.trans = setTrans;}
+	void SetAngle(DirectX::XMFLOAT3 setAngle) { victimModelData[modelNumber].angle = setAngle; }
+	void SetTrans(DirectX::XMFLOAT3 setTrans) { victimModelData[modelNumber].trans = setTrans;}
 	void SetCameraDataRotate(float x,float y,float z) {
 		cameraData.elevation = x;
 		cameraData.azimuth	 = y;

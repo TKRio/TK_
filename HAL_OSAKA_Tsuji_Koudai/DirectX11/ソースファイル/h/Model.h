@@ -39,30 +39,11 @@ namespace MMDBreaker {
 		//void DrawParts();
 
 		//Gettter
-		//モデルデータ
-		PMDData* GetModelData() {
-			return modelDate;
-		}
-		//頂点データ
-		VERTEX GetVertexData(int count) {
-			return vertexData[count];
-		}
-		//頂点データカウント
-		int GetVertexCount() {
-			return vertexCount;
-		}
-		//色情報
-		int GetColorCount() {
-			return colorCount;
-		}
-
-		//インデックスデータ
-		unsigned short* GetIndexData() {
-			return indexData;
-		}
-		//インデックスカウント
-		int GetIndexCount() {
-			return indexCount;
-		}
+		PMDData* GetModelData()   { return modelDate;}
+		VERTEX GetVertexData(int count) { return vertexData[count]; }
+		int GetVertexCount()      {return vertexCount;}
+		int GetColorCount()       { return colorCount; }
+		unsigned short* GetIndexData() { return indexData;}
+		int GetIndexCount() { return indexCount;}
 	};
 };
